@@ -12,6 +12,7 @@
 |------|------|------|
 | Day 01 | `day01_variables/day01_variables.py` | 변수와 자료형 — int, str, list, dict |
 | Day 02 | `day02_conditionals/day02_conditionals.py` | 조건문 — if / elif / else |
+| Day 03 | `day03_loops/day03_loops.py` | 반복문 — for / while |
 
 #### Day 01 요약
 - **초급**: 숫자·문자 변수 선언, 리스트 인덱싱, 딕셔너리 키-값 접근
@@ -22,3 +23,8 @@
 - **초급**: `if / elif / else` 기본 구조, 콜론·들여쓰기 규칙 — 놀이공원 입장료 판별기
 - **중급**: `and / or / not` 논리 연산자, 중첩 조건문, 조건부 표현식(Ternary) — 스마트 로그인 시스템
 - **고급**: `match-case` 패턴 매칭(Python 3.10+), 딕셔너리 매핑으로 if-elif 대체, `all() / any()` 다중 조건 검사, 단축 평가(Short-circuit)로 안전한 코드, 컴프리헨션 안의 다중 조건 분류
+
+#### Day 03 요약
+- **초급**: `for` + `range()` 기본 순회, 리스트 순회, `while` 조건 반복 — 구구단·출석부·숫자 세기
+- **중급**: 이중 `for`문으로 구구단 전체 출력, `continue`로 짝수단만 필터링, `enumerate()`로 인덱스+값 동시 순회
+- **고급**: 리스트 컴프리헨션으로 한 줄 압축, `zip()`으로 두 리스트 병렬 순회, 제너레이터 표현식으로 대용량 데이터 메모리 절약
