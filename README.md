@@ -14,6 +14,7 @@
 | Day 02 | `day02_conditionals/day02_conditionals.py` | 조건문 — if / elif / else |
 | Day 03 | `day03_loops/day03_loops.py` | 반복문 — for / while |
 | Day 04 | `day04_data_structures/day04_data_structures.py` | 리스트와 딕셔너리 심화 |
+| Day 05 | `day05_functions/day05_functions.py` | 함수 — def / lambda / 데코레이터 |
 
 #### Day 01 요약
 - **초급**: 숫자·문자 변수 선언, 리스트 인덱싱, 딕셔너리 키-값 접근
@@ -34,3 +35,8 @@
 - **초급**: 리스트 `append / insert / pop / 슬라이싱`, 딕셔너리 `keys() / values() / items()` — 간식 기차·사물함 실습
 - **중급**: 리스트 안의 딕셔너리 복합 구조, 컴프리헨션으로 조건 필터링, `.get()`으로 안전 접근, `update()`로 일괄 수정, 딕셔너리 컴프리헨션으로 성적표 생성
 - **고급**: 얕은 복사(`.copy()`)의 함정, `copy.deepcopy()`로 완전 분리, 딕셔너리 키-값 반전 컴프리헨션 / 실습: 전화번호부 검색 프로그램, `numpy`로 리스트 평균 계산
+
+#### Day 05 요약
+- **초급**: `def` 함수 정의·호출, 기본값 매개변수, 다중 반환값 언팩킹 — 주스 기계·사각형 정보·합격 판정
+- **중급**: `*args`로 가변 인자 수집, `**kwargs`로 키워드 인자 딕셔너리 수집, `lambda`로 한 줄 익명 함수 + 정렬 키 활용
+- **고급**: 데코레이터(`@`) — 함수를 수정하지 않고 앞뒤에 기능 장식, `wrapper` 패턴으로 로그 출력 / 실습: 곱하기·성적 판정·리스트 역순 함수 3개
