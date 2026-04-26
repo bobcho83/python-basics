@@ -15,6 +15,7 @@
 | Day 03 | `day03_loops/day03_loops.py` | 반복문 — for / while |
 | Day 04 | `day04_data_structures/day04_data_structures.py` | 리스트와 딕셔너리 심화 |
 | Day 05 | `day05_functions/day05_functions.py` | 함수 — def / lambda / 데코레이터 |
+| Day 06 | `day06_string_methods/day06_string_methods.py` | 문자열 메서드 — 변환·검색·정규표현식 |
 
 #### Day 01 요약
 - **초급**: 숫자·문자 변수 선언, 리스트 인덱싱, 딕셔너리 키-값 접근
@@ -40,3 +41,8 @@
 - **초급**: `def` 함수 정의·호출, 기본값 매개변수, 다중 반환값 언팩킹 — 주스 기계·사각형 정보·합격 판정
 - **중급**: `*args`로 가변 인자 수집, `**kwargs`로 키워드 인자 딕셔너리 수집, `lambda`로 한 줄 익명 함수 + 정렬 키 활용
 - **고급**: 데코레이터(`@`) — 함수를 수정하지 않고 앞뒤에 기능 장식, `wrapper` 패턴으로 로그 출력 / 실습: 곱하기·성적 판정·리스트 역순 함수 3개
+
+#### Day 06 요약
+- **초급**: `upper() / lower() / strip()` 변신 도구, `count()` 등장 횟수, `replace()`로 마스킹, `split() / join()` 가위·풀, f-string 포맷팅
+- **중급**: `endswith()`로 파일 확장자 확인, `zfill()`로 자릿수 맞추기, `[::-1]` 보폭 슬라이싱으로 문자열 뒤집기, `{:,}` 천단위 콤마 포맷, `split() + len()`으로 단어 수 세기
+- **고급**: `re` 모듈 정규표현식으로 이메일 패턴 추출(`findall`), UTF-8 인코딩(`encode`) / 디코딩(`decode`)으로 글자↔바이트 변환 원리 이해
