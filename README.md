@@ -16,6 +16,7 @@
 | Day 04 | `day04_data_structures/day04_data_structures.py` | 리스트와 딕셔너리 심화 |
 | Day 05 | `day05_functions/day05_functions.py` | 함수 — def / lambda / 데코레이터 |
 | Day 06 | `day06_string_methods/day06_string_methods.py` | 문자열 메서드 — 변환·검색·정규표현식 |
+| Day 07 | `day07_mini_project/day07_mini_project.py` | 1주차 미니 프로젝트 — 계산기·To-Do·분석기·게임 |
 
 #### Day 01 요약
 - **초급**: 숫자·문자 변수 선언, 리스트 인덱싱, 딕셔너리 키-값 접근
@@ -46,3 +47,9 @@
 - **초급**: `upper() / lower() / strip()` 변신 도구, `count()` 등장 횟수, `replace()`로 마스킹, `split() / join()` 가위·풀, f-string 포맷팅
 - **중급**: `endswith()`로 파일 확장자 확인, `zfill()`로 자릿수 맞추기, `[::-1]` 보폭 슬라이싱으로 문자열 뒤집기, `{:,}` 천단위 콤마 포맷, `split() + len()`으로 단어 수 세기
 - **고급**: `re` 모듈 정규표현식으로 이메일 패턴 추출(`findall`), UTF-8 인코딩(`encode`) / 디코딩(`decode`)으로 글자↔바이트 변환 원리 이해
+
+#### Day 07 요약 (1주차 미니 프로젝트 🎉)
+- **프로젝트 1 — 스마트 계산기**: `try-except`로 잘못된 입력·0 나누기 에러 방지, `float()`으로 소수점 연산 지원, `if-elif-else`로 연산자 분기
+- **프로젝트 2 — To-Do List**: `append()`로 항목 추가, `pop()`으로 항목 삭제, `enumerate()`로 번호 매겨 출력, `while` 루프로 메뉴 반복
+- **프로젝트 3 — 마케팅 성과 분석기**: `sum() / len()`으로 평균 계산, `for` 필터링으로 평균 초과 캠페인 추출, `max()`로 최고 기록 출력
+- **프로젝트 4 — 업다운 게임 & 명예의 전당**: `random.randint()`로 랜덤 숫자 생성, 중첩 `while`로 게임 루프, `sort()`로 시도 횟수 랭킹 정렬
