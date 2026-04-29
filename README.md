@@ -61,8 +61,14 @@
 | 날짜 | 파일 | 주제 |
 |------|------|------|
 | Day 08 | `Day08_class_basics/Day08_class_basics.py` | 클래스와 객체 — 생성자·상속·추상 클래스 |
+| Day 09 | `day09_constructor_methods/day09_constructor_methods.py` | 생성자와 메서드 — 인스턴스/클래스 변수·@property |
 
 #### Day 08 요약
 - **초급**: `class` 정의, `__init__` 생성자, `self` 키워드, 메서드 호출 — 스마트폰 설계도로 객체 2개 생성
 - **중급**: 상속(`super()`로 부모 생성자 호출), 메서드 오버라이딩으로 자식 클래스 재정의, `__`(더블 언더바)로 비공개 속성 보호 — 마케팅 캠페인 클래스
 - **고급**: `ABC / @abstractmethod`로 추상 클래스 강제 설계, `@classmethod`로 클래스 변수 관리, `__str__` 매직 메서드로 출력 형태 정의 / 실습: 학생 클래스·은행 계좌 클래스
+
+#### Day 09 요약
+- **초급**: `__init__` 생성자로 초기 상태 설정, 인스턴스 변수(`self.name`)와 클래스 변수(`ClassName.var`) 차이 이해 — 게임 캐릭터 생성기
+- **중급**: 인스턴스 메서드(`self`) / `@classmethod`(`cls`) / `@staticmethod` 3총사 역할 구분 — 피자 클래스로 판매량 관리·가격 계산
+- **고급**: `@property`(Getter)로 변수처럼 값 읽기, `@속성명.setter`(Setter)로 유효성 검사, `__`(정보 은닉)으로 외부 직접 수정 차단 — 회원 나이 검증 시스템
