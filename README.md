@@ -63,6 +63,7 @@
 | Day 08 | `Day08_class_basics/Day08_class_basics.py` | 클래스와 객체 — 생성자·상속·추상 클래스 |
 | Day 09 | `day09_constructor_methods/day09_constructor_methods.py` | 생성자와 메서드 — 인스턴스/클래스 변수·@property |
 | Day 10 | `day10_inheritance/day10_inheritance.py` | 상속 — 단일·다중 상속·MRO·추상 클래스 |
+| Day 11 | `day11_polymorphism_encapsulation/day11_polymorphism_encapsulation.py` | 다형성과 캡슐화 — 오버라이딩·접근제어·덕 타이핑 |
 
 #### Day 08 요약
 - **초급**: `class` 정의, `__init__` 생성자, `self` 키워드, 메서드 호출 — 스마트폰 설계도로 객체 2개 생성
@@ -78,3 +79,8 @@
 - **초급**: 단일 상속 구조(부모→자식), `super().__init__()`으로 부모 생성자 호출, 메서드 오버라이딩으로 자식 클래스 재정의 — 자동차·전기차 관계
 - **중급**: 다중 상속(두 부모를 쉼표로 연결), 메서드 충돌 시 `MRO` 우선순위 규칙, `클래스명.mro()`로 탐색 순서 확인 — 마케팅봇(이메일·SMS 동시 상속)
 - **고급**: `ABC / @abstractmethod`로 자식에게 구현 강제, 추상 클래스 직접 객체 생성 불가, 일반 메서드는 공통 기능으로 그대로 물려줌 — 광고 플랫폼 설계도
+
+#### Day 11 요약
+- **초급**: 다형성 — 같은 `run()` 메서드명으로 VideoAd·BannerAd가 각자 다르게 동작, `__cost` Private 속성 + `@property` Getter/Setter로 광고비 보호
+- **중급**: 덕 타이핑 — 상속 없이 메서드 이름만 같으면 동일하게 취급(KakaoTalk·Line), `@property` 계산된 가상 속성으로 잔여 예산·상태를 변수처럼 읽기
+- **접근 제어 3단계**: `name`(Public) / `_name`(Protected) / `__name`(Private) 레벨 이해
