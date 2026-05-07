@@ -1,0 +1,10 @@
+{
+    "campaign_name": "여름 신제품 프로모션",
+    "budget": 5000000,
+    "target_platform": [
+        "Instagram",
+        "Facebook",
+        "Youtube"
+    ],
+    "is_active": true
+}

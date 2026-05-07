@@ -64,6 +64,7 @@
 | Day 09 | `day09_constructor_methods/day09_constructor_methods.py` | 생성자와 메서드 — 인스턴스/클래스 변수·@property |
 | Day 10 | `day10_inheritance/day10_inheritance.py` | 상속 — 단일·다중 상속·MRO·추상 클래스 |
 | Day 11 | `day11_polymorphism_encapsulation/day11_polymorphism_encapsulation.py` | 다형성과 캡슐화 — 오버라이딩·접근제어·덕 타이핑 |
+| Day 12 | `day12_file_io/day12_file_io.py` | 파일 입출력 — TXT·JSON·CSV 읽기·쓰기 |
 
 #### Day 08 요약
 - **초급**: `class` 정의, `__init__` 생성자, `self` 키워드, 메서드 호출 — 스마트폰 설계도로 객체 2개 생성
@@ -84,3 +85,8 @@
 - **초급**: 다형성 — 같은 `run()` 메서드명으로 VideoAd·BannerAd가 각자 다르게 동작, `__cost` Private 속성 + `@property` Getter/Setter로 광고비 보호
 - **중급**: 덕 타이핑 — 상속 없이 메서드 이름만 같으면 동일하게 취급(KakaoTalk·Line), `@property` 계산된 가상 속성으로 잔여 예산·상태를 변수처럼 읽기
 - **접근 제어 3단계**: `name`(Public) / `_name`(Protected) / `__name`(Private) 레벨 이해
+
+#### Day 12 요약
+- **초급**: `open()` 모드(`r/w/a`) 이해, `with` 문으로 자동 파일 닫기, `readlines()`로 줄 단위 읽기 — 업무 일지 TXT 파일 시스템
+- **중급**: `json.dump()`로 딕셔너리→파일 저장, `json.load()`로 파일→딕셔너리 복원, `ensure_ascii=False`(한글 보존)·`indent=4`(가독성) 옵션 — 캠페인 설정 JSON 저장
+- **고급**: `csv.writer/reader`로 표 형식 데이터 읽기·쓰기, `utf-8-sig`로 엑셀 한글 깨짐 방지, `try-except`로 `FileNotFoundError` 안전 처리 — 마케팅 성과 CSV 분석
