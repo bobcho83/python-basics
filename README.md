@@ -65,6 +65,7 @@
 | Day 10 | `day10_inheritance/day10_inheritance.py` | 상속 — 단일·다중 상속·MRO·추상 클래스 |
 | Day 11 | `day11_polymorphism_encapsulation/day11_polymorphism_encapsulation.py` | 다형성과 캡슐화 — 오버라이딩·접근제어·덕 타이핑 |
 | Day 12 | `day12_file_io/day12_file_io.py` | 파일 입출력 — TXT·JSON·CSV 읽기·쓰기 |
+| Day 13 | `day13_exception_handling/day13_exception_handling.py` | 예외 처리 — try-except·사용자 정의 예외·traceback |
 
 #### Day 08 요약
 - **초급**: `class` 정의, `__init__` 생성자, `self` 키워드, 메서드 호출 — 스마트폰 설계도로 객체 2개 생성
@@ -85,6 +86,11 @@
 - **초급**: 다형성 — 같은 `run()` 메서드명으로 VideoAd·BannerAd가 각자 다르게 동작, `__cost` Private 속성 + `@property` Getter/Setter로 광고비 보호
 - **중급**: 덕 타이핑 — 상속 없이 메서드 이름만 같으면 동일하게 취급(KakaoTalk·Line), `@property` 계산된 가상 속성으로 잔여 예산·상태를 변수처럼 읽기
 - **접근 제어 3단계**: `name`(Public) / `_name`(Protected) / `__name`(Private) 레벨 이해
+
+#### Day 13 요약
+- **초급**: `try-except-else-finally` 구조 이해, `raise`로 직접 예외 발생, 다중 `except`로 상황별 대처 — 광고 수익률(ROI) 계산기
+- **중급**: `Exception` 상속으로 사용자 정의 예외 클래스(`ForbiddenWordError`) 생성, 예외 객체에 데이터(`word`, `message`) 담아 구체적 안내 — 광고 문구 검토 시스템
+- **고급**: `raise ... from ...` 예외 체이닝으로 원인 오류 보존(`MarketingDataError`), `traceback.format_exc()`로 파일·줄 번호·호출 스택 문자열 추출 — 마케팅 데이터 처리 로그
 
 #### Day 12 요약
 - **초급**: `open()` 모드(`r/w/a`) 이해, `with` 문으로 자동 파일 닫기, `readlines()`로 줄 단위 읽기 — 업무 일지 TXT 파일 시스템
