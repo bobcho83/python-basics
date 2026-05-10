@@ -1,0 +1,3 @@
+[<built-in method now of type object at 0x103921988>] Bob(123-456): 5000원 입금 (잔액: 15000원)
+[<built-in method now of type object at 0x103921988>] Bob(123-456): 3000원 출금 (잔액: 12000원)
+[<built-in method now of type object at 0x103921988>] Bob(123-456): 2400.0원 입금 (잔액: 14400.0원)

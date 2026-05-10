@@ -66,6 +66,7 @@
 | Day 11 | `day11_polymorphism_encapsulation/day11_polymorphism_encapsulation.py` | 다형성과 캡슐화 — 오버라이딩·접근제어·덕 타이핑 |
 | Day 12 | `day12_file_io/day12_file_io.py` | 파일 입출력 — TXT·JSON·CSV 읽기·쓰기 |
 | Day 13 | `day13_exception_handling/day13_exception_handling.py` | 예외 처리 — try-except·사용자 정의 예외·traceback |
+| Day 14 | `day14_mini_project/day14_mini_project.py` | 2주차 미니 프로젝트 — 스마트 은행 시스템 |
 
 #### Day 08 요약
 - **초급**: `class` 정의, `__init__` 생성자, `self` 키워드, 메서드 호출 — 스마트폰 설계도로 객체 2개 생성
@@ -86,6 +87,12 @@
 - **초급**: 다형성 — 같은 `run()` 메서드명으로 VideoAd·BannerAd가 각자 다르게 동작, `__cost` Private 속성 + `@property` Getter/Setter로 광고비 보호
 - **중급**: 덕 타이핑 — 상속 없이 메서드 이름만 같으면 동일하게 취급(KakaoTalk·Line), `@property` 계산된 가상 속성으로 잔여 예산·상태를 변수처럼 읽기
 - **접근 제어 3단계**: `name`(Public) / `_name`(Protected) / `__name`(Private) 레벨 이해
+
+#### Day 14 요약 (2주차 미니 프로젝트 🎉)
+- **프로젝트 — 스마트 은행 시스템**: 클래스·상속·캡슐화·파일 입출력·예외 처리를 하나로 결합한 종합 실습
+- **초급**: `BankError` → `InsufficientFundsError` 커스텀 예외 계층 정의, `BankAccount` 부모 클래스에 `__balance`(Private) + `@property` Getter 적용
+- **중급**: `SavingsAccount`(이자 자동 입금) / `CheckingAccount`(출금 수수료) 자식 클래스로 상속·다형성 구현, `withdraw()` 오버라이딩 + `super()` 활용
+- **고급**: 거래 발생 시마다 `bank_log.txt`에 타임스탬프 포함 로그 기록(파일 입출력), `InsufficientFundsError` 정확히 캐치하는 예외 처리로 안전한 시스템 완성
 
 #### Day 13 요약
 - **초급**: `try-except-else-finally` 구조 이해, `raise`로 직접 예외 발생, 다중 `except`로 상황별 대처 — 광고 수익률(ROI) 계산기
