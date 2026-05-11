@@ -103,3 +103,16 @@
 - **초급**: `open()` 모드(`r/w/a`) 이해, `with` 문으로 자동 파일 닫기, `readlines()`로 줄 단위 읽기 — 업무 일지 TXT 파일 시스템
 - **중급**: `json.dump()`로 딕셔너리→파일 저장, `json.load()`로 파일→딕셔너리 복원, `ensure_ascii=False`(한글 보존)·`indent=4`(가독성) 옵션 — 캠페인 설정 JSON 저장
 - **고급**: `csv.writer/reader`로 표 형식 데이터 읽기·쓰기, `utf-8-sig`로 엑셀 한글 깨짐 방지, `try-except`로 `FileNotFoundError` 안전 처리 — 마케팅 성과 CSV 분석
+
+---
+
+### 3주차 — 데이터 분석 (`week3_pandas/`)
+
+| 날짜 | 파일 | 주제 |
+|------|------|------|
+| Day 15 | `day15_pandas_series/day15_pandas_series.py` | Pandas 기초 — Series·DataFrame·필터링·정렬 |
+
+#### Day 15 요약
+- **초급**: `pd.Series(data, index=...)` 생성, 라벨 인덱싱, `sum()·mean()·max()·min()` 통계 메서드, Boolean 조건 필터링 — 주간 광고 클릭 수 분석
+- **중급**: 딕셔너리로 `pd.DataFrame` 생성, `df["열"]`로 열 선택, 파생 변수(`CTR(%)`) 계산·추가, `head()`·`describe()`로 데이터 탐색 — 마케팅 채널 성과 표
+- **고급**: Boolean Indexing으로 조건 행 추출, `sort_values(by=..., ascending=False)` 내림차순 정렬, `.loc[행, 열]` 라벨 기반 선택, `&` 다중 조건으로 가성비 채널 필터링
