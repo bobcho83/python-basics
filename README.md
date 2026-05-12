@@ -111,6 +111,12 @@
 | 날짜 | 파일 | 주제 |
 |------|------|------|
 | Day 15 | `day15_pandas_series/day15_pandas_series.py` | Pandas 기초 — Series·DataFrame·필터링·정렬 |
+| Day 16 | `day16_dataframe_basics/day16_dataframe_basics.py` | DataFrame 심화 — 필터링·정렬·병합·그룹화 |
+
+#### Day 16 요약
+- **초급**: 딕셔너리로 `pd.DataFrame` 생성, `df.shape`으로 크기 확인, `df["열"]` 열 선택, `df.loc[라벨]`·`df.iloc[번호]` 행 접근, `df.loc[행, 열]` 동시 접근 — 마케팅 캠페인 표
+- **중급**: 파생 변수(`클릭당_비용`) 계산·추가, 단일 조건·`&` 다중 조건 Boolean Indexing, `sort_values(ascending=True)` 오름차순 정렬 — 가성비 캠페인 필터링
+- **고급**: `pd.merge(df1, df2, on="공통열")`로 두 표 병합(VLOOKUP과 동일), `groupby("열")["집계열"].sum()`으로 그룹 합계, `.agg(["sum","mean","count"])`로 복합 통계 — 지역별 클릭 성과 분석
 
 #### Day 15 요약
 - **초급**: `pd.Series(data, index=...)` 생성, 라벨 인덱싱, `sum()·mean()·max()·min()` 통계 메서드, Boolean 조건 필터링 — 주간 광고 클릭 수 분석
