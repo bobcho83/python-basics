@@ -112,6 +112,12 @@
 |------|------|------|
 | Day 15 | `day15_pandas_series/day15_pandas_series.py` | Pandas 기초 — Series·DataFrame·필터링·정렬 |
 | Day 16 | `day16_dataframe_basics/day16_dataframe_basics.py` | DataFrame 심화 — 필터링·정렬·병합·그룹화 |
+| Day 17 | `day17_data_cleaning/day17_data_cleaning.py` | 데이터 정제 — 결측치·중복·타입변환·apply·피벗 테이블 |
+
+#### Day 17 요약
+- **초급**: `str.strip()`으로 공백 제거, `drop_duplicates()`로 중복 행 삭제, `fillna(mean())`으로 결측치 평균 대체, `replace()`+`astype(int)`로 타입 변환, 조건 필터링으로 이상값 제거 — 고객 데이터 정제
+- **중급**: `apply(함수)`로 구매금액 → 고객 등급(VIP·GOLD·SILVER) 분류, `map(딕셔너리)`로 지역코드 → 지역명 1:1 치환, `np.where(조건, 참, 거짓)`으로 마케팅 대상 조건부 치환
+- **고급**: `pd.to_datetime()`으로 문자열 날짜 → 시간 객체 변환 + `dt.day_name()`으로 요일 추출, `pivot_table()`로 채널×요일 매출 리포트, `resample("ME")`으로 월별 성과 합산
 
 #### Day 16 요약
 - **초급**: 딕셔너리로 `pd.DataFrame` 생성, `df.shape`으로 크기 확인, `df["열"]` 열 선택, `df.loc[라벨]`·`df.iloc[번호]` 행 접근, `df.loc[행, 열]` 동시 접근 — 마케팅 캠페인 표
