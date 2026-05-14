@@ -113,6 +113,12 @@
 | Day 15 | `day15_pandas_series/day15_pandas_series.py` | Pandas 기초 — Series·DataFrame·필터링·정렬 |
 | Day 16 | `day16_dataframe_basics/day16_dataframe_basics.py` | DataFrame 심화 — 필터링·정렬·병합·그룹화 |
 | Day 17 | `day17_data_cleaning/day17_data_cleaning.py` | 데이터 정제 — 결측치·중복·타입변환·apply·피벗 테이블 |
+| Day 18 | `day18_filtering_sorting/day18_filtering_sorting.py` | 필터링과 정렬 — isin·groupby·시계열·query·피벗 테이블 |
+
+#### Day 18 요약
+- **초급**: 단일·다중 조건 Boolean Indexing, `sort_values(ascending=False)` 내림차순, `df.loc[0:2, ['열1','열2']]` 행·열 동시 선택, `isin(['Google','Instagram'])` 리스트 일괄 필터링 — 캠페인 성과 조회
+- **중급**: `클릭수/노출수×100`으로 CTR 파생 변수 생성, `groupby().agg({'열':'sum','열':'mean'})`로 채널별 복합 집계, `sort_values`로 가성비 순위 도출, `map(딕셔너리)`로 채널명 한글 치환
+- **고급**: `pd.to_datetime()` + `dt.month` / `dt.day_name()`으로 월·요일 추출, `np.where()` 이중 조건 효율 등급 부여, `df.query("월 == 5 and 클릭수 >= 1000")` SQL 스타일 복합 필터, `pivot_table()`로 월별×채널별 지출 요약
 
 #### Day 17 요약
 - **초급**: `str.strip()`으로 공백 제거, `drop_duplicates()`로 중복 행 삭제, `fillna(mean())`으로 결측치 평균 대체, `replace()`+`astype(int)`로 타입 변환, 조건 필터링으로 이상값 제거 — 고객 데이터 정제
