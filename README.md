@@ -88,21 +88,21 @@
 - **중급**: 덕 타이핑 — 상속 없이 메서드 이름만 같으면 동일하게 취급(KakaoTalk·Line), `@property` 계산된 가상 속성으로 잔여 예산·상태를 변수처럼 읽기
 - **접근 제어 3단계**: `name`(Public) / `_name`(Protected) / `__name`(Private) 레벨 이해
 
-#### Day 14 요약 (2주차 미니 프로젝트 🎉)
-- **프로젝트 — 스마트 은행 시스템**: 클래스·상속·캡슐화·파일 입출력·예외 처리를 하나로 결합한 종합 실습
-- **초급**: `BankError` → `InsufficientFundsError` 커스텀 예외 계층 정의, `BankAccount` 부모 클래스에 `__balance`(Private) + `@property` Getter 적용
-- **중급**: `SavingsAccount`(이자 자동 입금) / `CheckingAccount`(출금 수수료) 자식 클래스로 상속·다형성 구현, `withdraw()` 오버라이딩 + `super()` 활용
-- **고급**: 거래 발생 시마다 `bank_log.txt`에 타임스탬프 포함 로그 기록(파일 입출력), `InsufficientFundsError` 정확히 캐치하는 예외 처리로 안전한 시스템 완성
+#### Day 12 요약
+- **초급**: `open()` 모드(`r/w/a`) 이해, `with` 문으로 자동 파일 닫기, `readlines()`로 줄 단위 읽기 — 업무 일지 TXT 파일 시스템
+- **중급**: `json.dump()`로 딕셔너리→파일 저장, `json.load()`로 파일→딕셔너리 복원, `ensure_ascii=False`(한글 보존)·`indent=4`(가독성) 옵션 — 캠페인 설정 JSON 저장
+- **고급**: `csv.writer/reader`로 표 형식 데이터 읽기·쓰기, `utf-8-sig`로 엑셀 한글 깨짐 방지, `try-except`로 `FileNotFoundError` 안전 처리 — 마케팅 성과 CSV 분석
 
 #### Day 13 요약
 - **초급**: `try-except-else-finally` 구조 이해, `raise`로 직접 예외 발생, 다중 `except`로 상황별 대처 — 광고 수익률(ROI) 계산기
 - **중급**: `Exception` 상속으로 사용자 정의 예외 클래스(`ForbiddenWordError`) 생성, 예외 객체에 데이터(`word`, `message`) 담아 구체적 안내 — 광고 문구 검토 시스템
 - **고급**: `raise ... from ...` 예외 체이닝으로 원인 오류 보존(`MarketingDataError`), `traceback.format_exc()`로 파일·줄 번호·호출 스택 문자열 추출 — 마케팅 데이터 처리 로그
 
-#### Day 12 요약
-- **초급**: `open()` 모드(`r/w/a`) 이해, `with` 문으로 자동 파일 닫기, `readlines()`로 줄 단위 읽기 — 업무 일지 TXT 파일 시스템
-- **중급**: `json.dump()`로 딕셔너리→파일 저장, `json.load()`로 파일→딕셔너리 복원, `ensure_ascii=False`(한글 보존)·`indent=4`(가독성) 옵션 — 캠페인 설정 JSON 저장
-- **고급**: `csv.writer/reader`로 표 형식 데이터 읽기·쓰기, `utf-8-sig`로 엑셀 한글 깨짐 방지, `try-except`로 `FileNotFoundError` 안전 처리 — 마케팅 성과 CSV 분석
+#### Day 14 요약 (2주차 미니 프로젝트 🎉)
+- **프로젝트 — 스마트 은행 시스템**: 클래스·상속·캡슐화·파일 입출력·예외 처리를 하나로 결합한 종합 실습
+- **초급**: `BankError` → `InsufficientFundsError` 커스텀 예외 계층 정의, `BankAccount` 부모 클래스에 `__balance`(Private) + `@property` Getter 적용
+- **중급**: `SavingsAccount`(이자 자동 입금) / `CheckingAccount`(출금 수수료) 자식 클래스로 상속·다형성 구현, `withdraw()` 오버라이딩 + `super()` 활용
+- **고급**: 거래 발생 시마다 `bank_log.txt`에 타임스탬프 포함 로그 기록(파일 입출력), `InsufficientFundsError` 정확히 캐치하는 예외 처리로 안전한 시스템 완성
 
 ---
 
@@ -115,22 +115,22 @@
 | Day 17 | `day17_data_cleaning/day17_data_cleaning.py` | 데이터 정제 — 결측치·중복·타입변환·apply·피벗 테이블 |
 | Day 18 | `day18_filtering_sorting/day18_filtering_sorting.py` | 필터링과 정렬 — isin·groupby·시계열·query·피벗 테이블 |
 
-#### Day 18 요약
-- **초급**: 단일·다중 조건 Boolean Indexing, `sort_values(ascending=False)` 내림차순, `df.loc[0:2, ['열1','열2']]` 행·열 동시 선택, `isin(['Google','Instagram'])` 리스트 일괄 필터링 — 캠페인 성과 조회
-- **중급**: `클릭수/노출수×100`으로 CTR 파생 변수 생성, `groupby().agg({'열':'sum','열':'mean'})`로 채널별 복합 집계, `sort_values`로 가성비 순위 도출, `map(딕셔너리)`로 채널명 한글 치환
-- **고급**: `pd.to_datetime()` + `dt.month` / `dt.day_name()`으로 월·요일 추출, `np.where()` 이중 조건 효율 등급 부여, `df.query("월 == 5 and 클릭수 >= 1000")` SQL 스타일 복합 필터, `pivot_table()`로 월별×채널별 지출 요약
-
-#### Day 17 요약
-- **초급**: `str.strip()`으로 공백 제거, `drop_duplicates()`로 중복 행 삭제, `fillna(mean())`으로 결측치 평균 대체, `replace()`+`astype(int)`로 타입 변환, 조건 필터링으로 이상값 제거 — 고객 데이터 정제
-- **중급**: `apply(함수)`로 구매금액 → 고객 등급(VIP·GOLD·SILVER) 분류, `map(딕셔너리)`로 지역코드 → 지역명 1:1 치환, `np.where(조건, 참, 거짓)`으로 마케팅 대상 조건부 치환
-- **고급**: `pd.to_datetime()`으로 문자열 날짜 → 시간 객체 변환 + `dt.day_name()`으로 요일 추출, `pivot_table()`로 채널×요일 매출 리포트, `resample("ME")`으로 월별 성과 합산
+#### Day 15 요약
+- **초급**: `pd.Series(data, index=...)` 생성, 라벨 인덱싱, `sum()·mean()·max()·min()` 통계 메서드, Boolean 조건 필터링 — 주간 광고 클릭 수 분석
+- **중급**: 딕셔너리로 `pd.DataFrame` 생성, `df["열"]`로 열 선택, 파생 변수(`CTR(%)`) 계산·추가, `head()`·`describe()`로 데이터 탐색 — 마케팅 채널 성과 표
+- **고급**: Boolean Indexing으로 조건 행 추출, `sort_values(by=..., ascending=False)` 내림차순 정렬, `.loc[행, 열]` 라벨 기반 선택, `&` 다중 조건으로 가성비 채널 필터링
 
 #### Day 16 요약
 - **초급**: 딕셔너리로 `pd.DataFrame` 생성, `df.shape`으로 크기 확인, `df["열"]` 열 선택, `df.loc[라벨]`·`df.iloc[번호]` 행 접근, `df.loc[행, 열]` 동시 접근 — 마케팅 캠페인 표
 - **중급**: 파생 변수(`클릭당_비용`) 계산·추가, 단일 조건·`&` 다중 조건 Boolean Indexing, `sort_values(ascending=True)` 오름차순 정렬 — 가성비 캠페인 필터링
 - **고급**: `pd.merge(df1, df2, on="공통열")`로 두 표 병합(VLOOKUP과 동일), `groupby("열")["집계열"].sum()`으로 그룹 합계, `.agg(["sum","mean","count"])`로 복합 통계 — 지역별 클릭 성과 분석
 
-#### Day 15 요약
-- **초급**: `pd.Series(data, index=...)` 생성, 라벨 인덱싱, `sum()·mean()·max()·min()` 통계 메서드, Boolean 조건 필터링 — 주간 광고 클릭 수 분석
-- **중급**: 딕셔너리로 `pd.DataFrame` 생성, `df["열"]`로 열 선택, 파생 변수(`CTR(%)`) 계산·추가, `head()`·`describe()`로 데이터 탐색 — 마케팅 채널 성과 표
-- **고급**: Boolean Indexing으로 조건 행 추출, `sort_values(by=..., ascending=False)` 내림차순 정렬, `.loc[행, 열]` 라벨 기반 선택, `&` 다중 조건으로 가성비 채널 필터링
+#### Day 17 요약
+- **초급**: `str.strip()`으로 공백 제거, `drop_duplicates()`로 중복 행 삭제, `fillna(mean())`으로 결측치 평균 대체, `replace()`+`astype(int)`로 타입 변환, 조건 필터링으로 이상값 제거 — 고객 데이터 정제
+- **중급**: `apply(함수)`로 구매금액 → 고객 등급(VIP·GOLD·SILVER) 분류, `map(딕셔너리)`로 지역코드 → 지역명 1:1 치환, `np.where(조건, 참, 거짓)`으로 마케팅 대상 조건부 치환
+- **고급**: `pd.to_datetime()`으로 문자열 날짜 → 시간 객체 변환 + `dt.day_name()`으로 요일 추출, `pivot_table()`로 채널×요일 매출 리포트, `resample("ME")`으로 월별 성과 합산
+
+#### Day 18 요약
+- **초급**: 단일·다중 조건 Boolean Indexing, `sort_values(ascending=False)` 내림차순, `df.loc[0:2, ['열1','열2']]` 행·열 동시 선택, `isin(['Google','Instagram'])` 리스트 일괄 필터링 — 캠페인 성과 조회
+- **중급**: `클릭수/노출수×100`으로 CTR 파생 변수 생성, `groupby().agg({'열':'sum','열':'mean'})`로 채널별 복합 집계, `sort_values`로 가성비 순위 도출, `map(딕셔너리)`로 채널명 한글 치환
+- **고급**: `pd.to_datetime()` + `dt.month` / `dt.day_name()`으로 월·요일 추출, `np.where()` 이중 조건 효율 등급 부여, `df.query("월 == 5 and 클릭수 >= 1000")` SQL 스타일 복합 필터, `pivot_table()`로 월별×채널별 지출 요약
