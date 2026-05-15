@@ -114,6 +114,7 @@
 | Day 16 | `day16_dataframe_basics/day16_dataframe_basics.py` | DataFrame 심화 — 필터링·정렬·병합·그룹화 |
 | Day 17 | `day17_data_cleaning/day17_data_cleaning.py` | 데이터 정제 — 결측치·중복·타입변환·apply·피벗 테이블 |
 | Day 18 | `day18_filtering_sorting/day18_filtering_sorting.py` | 필터링과 정렬 — isin·groupby·시계열·query·피벗 테이블 |
+| Day 19 | `day19_groupby_aggregate/day19_groupby_aggregate.py` | 그룹화와 집계 — groupby·agg·filter·다중 그룹화 |
 
 #### Day 15 요약
 - **초급**: `pd.Series(data, index=...)` 생성, 라벨 인덱싱, `sum()·mean()·max()·min()` 통계 메서드, Boolean 조건 필터링 — 주간 광고 클릭 수 분석
@@ -129,6 +130,11 @@
 - **초급**: `str.strip()`으로 공백 제거, `drop_duplicates()`로 중복 행 삭제, `fillna(mean())`으로 결측치 평균 대체, `replace()`+`astype(int)`로 타입 변환, 조건 필터링으로 이상값 제거 — 고객 데이터 정제
 - **중급**: `apply(함수)`로 구매금액 → 고객 등급(VIP·GOLD·SILVER) 분류, `map(딕셔너리)`로 지역코드 → 지역명 1:1 치환, `np.where(조건, 참, 거짓)`으로 마케팅 대상 조건부 치환
 - **고급**: `pd.to_datetime()`으로 문자열 날짜 → 시간 객체 변환 + `dt.day_name()`으로 요일 추출, `pivot_table()`로 채널×요일 매출 리포트, `resample("ME")`으로 월별 성과 합산
+
+#### Day 19 요약
+- **초급**: `groupby('열')` 그룹 객체 생성, `for name, group in grouped` 반복 확인, `.sum()·.mean()·.count()` 단일 집계, `agg(['sum','mean','count'])` 리스트로 한 번에 집계 — 제품별 매출 분석
+- **중급**: `agg({'열':['sum','mean'], '열2':'count'})` 딕셔너리로 컬럼별 다른 함수 적용, `agg(total='sum', average='mean')` 결과 열 이름 커스터마이징, `filter(lambda x: x.sum() >= 150)` 그룹 단위 조건 필터링, `isin()` 조합으로 고성과 제품 전체 데이터 추출
+- **고급**: `groupby(['지역','product'])` 2단계·`groupby(['연도','월','product'])` 3단계 다중 레벨 집계, 마케팅 캠페인 실전 분석 — `conversions/clicks`으로 전환율(CVR) 파생 변수 생성 후 캠페인별 평균 전환율 비교
 
 #### Day 18 요약
 - **초급**: 단일·다중 조건 Boolean Indexing, `sort_values(ascending=False)` 내림차순, `df.loc[0:2, ['열1','열2']]` 행·열 동시 선택, `isin(['Google','Instagram'])` 리스트 일괄 필터링 — 캠페인 성과 조회
