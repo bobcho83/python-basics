@@ -115,6 +115,7 @@
 | Day 17 | `day17_data_cleaning/day17_data_cleaning.py` | 데이터 정제 — 결측치·중복·타입변환·apply·피벗 테이블 |
 | Day 18 | `day18_filtering_sorting/day18_filtering_sorting.py` | 필터링과 정렬 — isin·groupby·시계열·query·피벗 테이블 |
 | Day 19 | `day19_groupby_aggregate/day19_groupby_aggregate.py` | 그룹화와 집계 — groupby·agg·filter·다중 그룹화 |
+| Day 20 | `day20_visualization/day20_visualization.py` | 데이터 시각화 — Matplotlib 선·막대·산점도·서브플롯·이중 축 |
 
 #### Day 15 요약
 - **초급**: `pd.Series(data, index=...)` 생성, 라벨 인덱싱, `sum()·mean()·max()·min()` 통계 메서드, Boolean 조건 필터링 — 주간 광고 클릭 수 분석
@@ -130,6 +131,11 @@
 - **초급**: `str.strip()`으로 공백 제거, `drop_duplicates()`로 중복 행 삭제, `fillna(mean())`으로 결측치 평균 대체, `replace()`+`astype(int)`로 타입 변환, 조건 필터링으로 이상값 제거 — 고객 데이터 정제
 - **중급**: `apply(함수)`로 구매금액 → 고객 등급(VIP·GOLD·SILVER) 분류, `map(딕셔너리)`로 지역코드 → 지역명 1:1 치환, `np.where(조건, 참, 거짓)`으로 마케팅 대상 조건부 치환
 - **고급**: `pd.to_datetime()`으로 문자열 날짜 → 시간 객체 변환 + `dt.day_name()`으로 요일 추출, `pivot_table()`로 채널×요일 매출 리포트, `resample("ME")`으로 월별 성과 합산
+
+#### Day 20 요약
+- **초급**: `plt.plot()` 선 그래프(추이), `plt.bar()` 막대 그래프(비교), `plt.scatter()` 산점도(상관관계), `plt.hist()` 히스토그램(분포) — 4가지 기본 그래프 + `marker·color·grid` 스타일 옵션
+- **중급**: `plt.subplots(1, 2)` 화면 분할 후 `axes[0]·axes[1]`에 개별 그래프 배치, `legend()`로 범례 추가, `tight_layout()`으로 글자 겹침 방지 — 구글 vs 페이스북 채널 비교 대시보드
+- **고급**: `ax.twinx()`로 x축 공유·y축 이중 분리(왼쪽: 비용 막대 / 오른쪽: CTR 선), `plt.savefig('파일.png', dpi=300, bbox_inches='tight')`로 고화질 이미지 저장 — 광고비 vs CTR 혼합 리포트
 
 #### Day 19 요약
 - **초급**: `groupby('열')` 그룹 객체 생성, `for name, group in grouped` 반복 확인, `.sum()·.mean()·.count()` 단일 집계, `agg(['sum','mean','count'])` 리스트로 한 번에 집계 — 제품별 매출 분석
