@@ -116,6 +116,7 @@
 | Day 18 | `day18_filtering_sorting/day18_filtering_sorting.py` | 필터링과 정렬 — isin·groupby·시계열·query·피벗 테이블 |
 | Day 19 | `day19_groupby_aggregate/day19_groupby_aggregate.py` | 그룹화와 집계 — groupby·agg·filter·다중 그룹화 |
 | Day 20 | `day20_visualization/day20_visualization.py` | 데이터 시각화 — Matplotlib 선·막대·산점도·서브플롯·이중 축 |
+| Day 21 | `day21_mini_project/day21_mini_project.py` | 3주차 미니 프로젝트 — 쇼핑몰 판매 데이터 분석 파이프라인 |
 
 #### Day 15 요약
 - **초급**: `pd.Series(data, index=...)` 생성, 라벨 인덱싱, `sum()·mean()·max()·min()` 통계 메서드, Boolean 조건 필터링 — 주간 광고 클릭 수 분석
@@ -131,6 +132,12 @@
 - **초급**: `str.strip()`으로 공백 제거, `drop_duplicates()`로 중복 행 삭제, `fillna(mean())`으로 결측치 평균 대체, `replace()`+`astype(int)`로 타입 변환, 조건 필터링으로 이상값 제거 — 고객 데이터 정제
 - **중급**: `apply(함수)`로 구매금액 → 고객 등급(VIP·GOLD·SILVER) 분류, `map(딕셔너리)`로 지역코드 → 지역명 1:1 치환, `np.where(조건, 참, 거짓)`으로 마케팅 대상 조건부 치환
 - **고급**: `pd.to_datetime()`으로 문자열 날짜 → 시간 객체 변환 + `dt.day_name()`으로 요일 추출, `pivot_table()`로 채널×요일 매출 리포트, `resample("ME")`으로 월별 성과 합산
+
+#### Day 21 요약 (3주차 미니 프로젝트 🎉)
+- **1단계 — 로드**: 결측치·중복 포함 가상 쇼핑몰 CSV 직접 생성 후 `pd.read_csv()`로 불러오기, `dtypes`로 컬럼 타입 확인
+- **2단계 — 정제**: `drop_duplicates()`로 Eve 중복 주문 제거, `fillna(median())`으로 David 수량 NaN 처리, `astype(int)`로 타입 변환
+- **3단계 — 분석**: `describe()`로 전체 통계량 확인, 금액 3만원 이상 조건 필터링, `groupby + agg(총매출='sum', 평균수량='mean')`으로 카테고리별 성과 집계
+- **4단계 — 시각화**: `subplots(1,3)` 3칸 대시보드 — `to_datetime()`+선 그래프(일별 추이) · 막대(카테고리 비교) · 히스토그램(금액 분포), `savefig()`로 PNG 저장
 
 #### Day 20 요약
 - **초급**: `plt.plot()` 선 그래프(추이), `plt.bar()` 막대 그래프(비교), `plt.scatter()` 산점도(상관관계), `plt.hist()` 히스토그램(분포) — 4가지 기본 그래프 + `marker·color·grid` 스타일 옵션
