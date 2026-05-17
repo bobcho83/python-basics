@@ -133,23 +133,23 @@
 - **중급**: `apply(함수)`로 구매금액 → 고객 등급(VIP·GOLD·SILVER) 분류, `map(딕셔너리)`로 지역코드 → 지역명 1:1 치환, `np.where(조건, 참, 거짓)`으로 마케팅 대상 조건부 치환
 - **고급**: `pd.to_datetime()`으로 문자열 날짜 → 시간 객체 변환 + `dt.day_name()`으로 요일 추출, `pivot_table()`로 채널×요일 매출 리포트, `resample("ME")`으로 월별 성과 합산
 
-#### Day 21 요약 (3주차 미니 프로젝트 🎉)
-- **1단계 — 로드**: 결측치·중복 포함 가상 쇼핑몰 CSV 직접 생성 후 `pd.read_csv()`로 불러오기, `dtypes`로 컬럼 타입 확인
-- **2단계 — 정제**: `drop_duplicates()`로 Eve 중복 주문 제거, `fillna(median())`으로 David 수량 NaN 처리, `astype(int)`로 타입 변환
-- **3단계 — 분석**: `describe()`로 전체 통계량 확인, 금액 3만원 이상 조건 필터링, `groupby + agg(총매출='sum', 평균수량='mean')`으로 카테고리별 성과 집계
-- **4단계 — 시각화**: `subplots(1,3)` 3칸 대시보드 — `to_datetime()`+선 그래프(일별 추이) · 막대(카테고리 비교) · 히스토그램(금액 분포), `savefig()`로 PNG 저장
-
-#### Day 20 요약
-- **초급**: `plt.plot()` 선 그래프(추이), `plt.bar()` 막대 그래프(비교), `plt.scatter()` 산점도(상관관계), `plt.hist()` 히스토그램(분포) — 4가지 기본 그래프 + `marker·color·grid` 스타일 옵션
-- **중급**: `plt.subplots(1, 2)` 화면 분할 후 `axes[0]·axes[1]`에 개별 그래프 배치, `legend()`로 범례 추가, `tight_layout()`으로 글자 겹침 방지 — 구글 vs 페이스북 채널 비교 대시보드
-- **고급**: `ax.twinx()`로 x축 공유·y축 이중 분리(왼쪽: 비용 막대 / 오른쪽: CTR 선), `plt.savefig('파일.png', dpi=300, bbox_inches='tight')`로 고화질 이미지 저장 — 광고비 vs CTR 혼합 리포트
+#### Day 18 요약
+- **초급**: 단일·다중 조건 Boolean Indexing, `sort_values(ascending=False)` 내림차순, `df.loc[0:2, ['열1','열2']]` 행·열 동시 선택, `isin(['Google','Instagram'])` 리스트 일괄 필터링 — 캠페인 성과 조회
+- **중급**: `클릭수/노출수×100`으로 CTR 파생 변수 생성, `groupby().agg({'열':'sum','열':'mean'})`로 채널별 복합 집계, `sort_values`로 가성비 순위 도출, `map(딕셔너리)`로 채널명 한글 치환
+- **고급**: `pd.to_datetime()` + `dt.month` / `dt.day_name()`으로 월·요일 추출, `np.where()` 이중 조건 효율 등급 부여, `df.query("월 == 5 and 클릭수 >= 1000")` SQL 스타일 복합 필터, `pivot_table()`로 월별×채널별 지출 요약
 
 #### Day 19 요약
 - **초급**: `groupby('열')` 그룹 객체 생성, `for name, group in grouped` 반복 확인, `.sum()·.mean()·.count()` 단일 집계, `agg(['sum','mean','count'])` 리스트로 한 번에 집계 — 제품별 매출 분석
 - **중급**: `agg({'열':['sum','mean'], '열2':'count'})` 딕셔너리로 컬럼별 다른 함수 적용, `agg(total='sum', average='mean')` 결과 열 이름 커스터마이징, `filter(lambda x: x.sum() >= 150)` 그룹 단위 조건 필터링, `isin()` 조합으로 고성과 제품 전체 데이터 추출
 - **고급**: `groupby(['지역','product'])` 2단계·`groupby(['연도','월','product'])` 3단계 다중 레벨 집계, 마케팅 캠페인 실전 분석 — `conversions/clicks`으로 전환율(CVR) 파생 변수 생성 후 캠페인별 평균 전환율 비교
 
-#### Day 18 요약
-- **초급**: 단일·다중 조건 Boolean Indexing, `sort_values(ascending=False)` 내림차순, `df.loc[0:2, ['열1','열2']]` 행·열 동시 선택, `isin(['Google','Instagram'])` 리스트 일괄 필터링 — 캠페인 성과 조회
-- **중급**: `클릭수/노출수×100`으로 CTR 파생 변수 생성, `groupby().agg({'열':'sum','열':'mean'})`로 채널별 복합 집계, `sort_values`로 가성비 순위 도출, `map(딕셔너리)`로 채널명 한글 치환
-- **고급**: `pd.to_datetime()` + `dt.month` / `dt.day_name()`으로 월·요일 추출, `np.where()` 이중 조건 효율 등급 부여, `df.query("월 == 5 and 클릭수 >= 1000")` SQL 스타일 복합 필터, `pivot_table()`로 월별×채널별 지출 요약
+#### Day 20 요약
+- **초급**: `plt.plot()` 선 그래프(추이), `plt.bar()` 막대 그래프(비교), `plt.scatter()` 산점도(상관관계), `plt.hist()` 히스토그램(분포) — 4가지 기본 그래프 + `marker·color·grid` 스타일 옵션
+- **중급**: `plt.subplots(1, 2)` 화면 분할 후 `axes[0]·axes[1]`에 개별 그래프 배치, `legend()`로 범례 추가, `tight_layout()`으로 글자 겹침 방지 — 구글 vs 페이스북 채널 비교 대시보드
+- **고급**: `ax.twinx()`로 x축 공유·y축 이중 분리(왼쪽: 비용 막대 / 오른쪽: CTR 선), `plt.savefig('파일.png', dpi=300, bbox_inches='tight')`로 고화질 이미지 저장 — 광고비 vs CTR 혼합 리포트
+
+#### Day 21 요약 (3주차 미니 프로젝트 🎉)
+- **1단계 — 로드**: 결측치·중복 포함 가상 쇼핑몰 CSV 직접 생성 후 `pd.read_csv()`로 불러오기, `dtypes`로 컬럼 타입 확인
+- **2단계 — 정제**: `drop_duplicates()`로 Eve 중복 주문 제거, `fillna(median())`으로 David 수량 NaN 처리, `astype(int)`로 타입 변환
+- **3단계 — 분석**: `describe()`로 전체 통계량 확인, 금액 3만원 이상 조건 필터링, `groupby + agg(총매출='sum', 평균수량='mean')`으로 카테고리별 성과 집계
+- **4단계 — 시각화**: `subplots(1,3)` 3칸 대시보드 — `to_datetime()`+선 그래프(일별 추이) · 막대(카테고리 비교) · 히스토그램(금액 분포), `savefig()`로 PNG 저장
